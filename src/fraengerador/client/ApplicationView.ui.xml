@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.biggerFont {
+			font-size: 120%;
+		}
+		.withMargin {
+			margin: 10px;
+		}
+		.wide {
+			width: 99%;
+		}
+	</ui:style>
+	<g:DockLayoutPanel addStyleNames="{style.withMargin}">
+		<g:north size="80">
+			<g:HTML>
+				<h1>
+					<img src="franken_25x25.png" alt="Frankenrechen" />
+					Fr&auml;nger&auml;dor
+				</h1>
+			</g:HTML>
+		</g:north>
+		<g:north size="150">
+			<g:TextArea ui:field="source" addStyleNames="{style.wide} {style.biggerFont}"
+				height="95%" />
+		</g:north>
+		<g:center>
+			<g:ScrollPanel>
+				<g:Label ui:field="target" addStyleNames="{style.biggerFont}" />
+			</g:ScrollPanel>
+		</g:center>
+		<g:south size="150">
+			<g:VerticalPanel addStyleNames="{style.wide}">
+				<g:TextArea ui:field="message" addStyleNames="{style.wide}"
+					height="100px">
+					Vorschläge zur Aufnahme ins Wörterbuch</g:TextArea>
+				<g:Button ui:field="send" text="Abschicken" />
+			</g:VerticalPanel>
+		</g:south>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 
